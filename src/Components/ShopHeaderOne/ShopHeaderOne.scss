@@ -1,0 +1,52 @@
+
+ :root{
+    --color-one : rgb(38,47,72);
+    --color-two : #333333;
+    --color-three : #ffffff;
+    --color-four : #bf9d61;
+    --color-five : lightgrey;
+
+    --p-size : 1.4rem;
+    --font : 'Nunito', sans-serif;
+} 
+
+.headertilbud{
+    z-index: 100;
+    position: fixed;
+    top: 7vh;
+    width: 100%;
+    height: 2.2em;
+    background-color: var(--color-one);
+    color: var(--color-three);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.headertilbud__logo{
+    font-family: "museo-sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.headertilbud__icons{
+    align-self: center;
+    justify-self: center;
+}
+
+.headertilbud__koebekurv{
+    text-decoration: none;
+    color: var(--color-three);
+}
+
+@media screen and (min-width: 820px){
+    .headertilbud{
+        top: 12vh;
+    }
+}

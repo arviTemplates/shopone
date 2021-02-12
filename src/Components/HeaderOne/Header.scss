@@ -1,0 +1,209 @@
+$textColor : #000000;
+$textColorTwo : #ffffff;
+$todoColor : rgb(38,47,72);
+$footerColor : rgb(42,52,68);
+$layoutLineOne : rgb(200, 200, 200);
+$layoutLineTwo : rgb(120, 120, 120);
+$hover : rgba(195, 030, 048, 0.6);
+
+//fonts
+
+$light : 300;
+$regular : 400;
+$medium : 600;
+$semibold : 800;
+$bold : 800;
+
+.header{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    background-color: $textColorTwo;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7vh;
+    z-index: 10000;
+
+    &__wrapper{
+    width: 90%;
+    height: 4vh;
+    margin: 0.6rem auto;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    &__logo{
+        height: 100%;
+        &-img{
+            height: 100%;
+            width: auto;
+        }
+        /* align-self: flex-end; */
+    }
+
+    &__utility{
+        color: $todoColor;
+        z-index: 10;
+    }
+
+    &__burger{
+        display: inherit;
+        width: 80%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        list-style: none;
+        line-height: 3em;
+        font-size: 1.2em;
+        z-index: 100;
+        transition: 500ms;
+    }
+
+    &__size{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        display: inherit;
+        align-self: center;
+        font-size: 2em;
+    }
+
+    &__open{
+        top: 0;
+    }
+
+    &__closed{
+        top: -120%;
+    }
+
+    &__burger__ul{
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background-color: $layoutLineTwo;
+        list-style: none;
+        line-height: 3rem;
+        font-size: 1.2rem;
+        box-sizing: border-box;
+        padding: 7rem 0;
+        margin: 0;
+    }
+
+    &__burger__link{
+        text-decoration: none;
+        color: $textColorTwo;
+        transition: 500ms;
+    }
+
+    &__shutdown{
+        position: absolute;
+        right: 5%;
+        top: 1rem;
+        padding: 0 0.5rem;
+        font-size: 2.2rem;
+        color: $textColorTwo;
+    }
+
+    &__nav{
+        display: none;
+
+    }
+    &__linklist{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    &__link{
+        text-decoration: none;
+        color: $textColor;
+        padding-top: 0.3rem;
+        line-height: 2.5rem;
+        font-size: 0.9rem;
+        font-weight: $light;
+        border-top: solid 2px $textColorTwo;
+        box-sizing: border-box;
+    }
+
+    &__active{
+        color: $todoColor;
+        border-top: solid 2px $todoColor;
+    }
+}
+
+
+.find-pris{
+    padding: 0.5em 1em;
+    text-align: center;
+    background-color: rgb(32, 152, 192);
+    color: $textColorTwo;
+    border-radius: 5px;
+}
+
+.ring{
+    position: fixed;
+    bottom: 50px;
+    width: 130px;
+    right: 5px;
+    margin-left: -65px;
+    padding: 0.5em 1em;
+    text-align: center;
+    background-color: rgb(32, 152, 192);
+    color: $textColorTwo;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 820px){
+    .header{
+
+        height: 12vh;
+
+        &__burger{
+            display: none;
+        }
+
+        &__utility{
+            display: none;
+        }
+
+        &__nav{
+            display: block;
+            width: 100%;
+        }
+
+        &__wrapper{
+            align-items: center;
+            justify-content: center;
+            width: 69vw;
+        }
+
+        &__link{
+            padding-top: 1rem;
+        }
+
+        &__linklist{
+            margin: 0 2rem;
+        }
+    }
+
+}
+@media screen and (min-width: 910px){
+    .header{
+        &__logo{
+            height: 10vh;
+            align-self: start;
+            &-img{
+                height: 100%;
+                width: auto;
+            }
+        }
+        &__nav{
+            display: block;
+            margin: 3em 0 0 3rem;
+        }
+    }
+}
+

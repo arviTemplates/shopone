@@ -1,0 +1,233 @@
+$textColor : #000000;
+$textColorTwo : #ffffff;
+$todoColor : rgb(38,47,72);
+$footerColor : rgb(42,52,68);
+$layoutLineOne : rgb(200, 200, 200);
+$layoutLineTwo : rgb(120, 120, 120);
+$hover : rgba(195, 030, 048, 0.6);
+
+//fonts
+
+$light : 300;
+$regular : 400;
+$medium : 600;
+$semibold : 800;
+$bold : 800;
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.opbygning{
+    padding: 4em 0.2em 0 0.2em;
+    margin-bottom: -3em;
+}
+
+.omos{
+    width: 80%;
+    margin: 1em auto;
+    padding-top: 5em;
+}
+
+.footer{
+    background-color: $todoColor;
+    font-weight: $light;
+    margin:0;
+    padding: 0;
+
+    p{
+        color: #ffffff;
+        margin-block-end: 0;
+        margin-block-start: 0;
+    }
+
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        font-size: 0.9rem;
+        padding: 1rem 0;
+        width: 80vw;
+        margin: auto;
+        box-sizing: border-box;
+    }
+    &__image{
+        width: 50vw;
+    }
+    &__adresse{
+        width: 100%;
+        line-height: 0.4rem;
+        color: $textColorTwo;
+        font-style: normal;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    &__web-one{
+        color: $textColorTwo;
+        text-decoration: none;
+    }
+    &__navn{
+        padding: 7px 0;
+        font-weight: $regular;
+    }
+    &__linkwrapper{
+        display: flex; 
+        width: 7rem;
+    }
+    &__middlebox{
+        display: flex;
+        color: $textColorTwo;
+        flex-direction: column;
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 3/4;
+
+    }
+    &__link{
+        text-decoration: none;
+        color: $textColorTwo;
+    }
+    &__linktext{
+        font-weight: $regular;
+    }
+
+    &__facebook{
+        width: 55%;
+    }
+    
+    &__omos{
+        color: $textColorTwo;
+    }
+
+    &__text-omos{
+        color: $textColorTwo;
+    }
+
+    &__box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto auto auto;
+    }
+    &__heading{
+        font-weight: $regular;
+        padding-top: 0.1rem;
+        font-size: 0.9rem;
+        color: $textColorTwo;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__text{
+        margin-top: 0;
+        color: $textColorTwo ;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    &__bottum{
+        background-color: $footerColor;
+        color: $textColorTwo;
+        &-wrapper{
+            width: 80vw;
+            height: 3rem;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+    }
+    &__endlink{
+        text-decoration: none;
+        color: $textColorTwo;
+    }
+
+    &__copy{
+        display: none;
+    }
+
+}
+
+.safari{
+    margin-top: 4rem;
+}
+
+
+
+@media screen and (min-width: 870px){
+    .footer{
+        .p{
+            width: 24em;
+        }
+        &__content{
+            display: flex;
+            width: 69vw;
+        }
+        &__navn{
+            padding: 0;
+        }
+
+        &__adresse{
+            width: 28vw;
+        }
+
+        &__image{
+            margin-top: 1rem;
+            width: 8vw;
+        }
+
+        &__linkwrapper{
+            width: 9rem;
+        }
+
+        &__middlebox{
+            width: 28vw;
+            justify-content: flex-start;
+            padding-left: 8rem;
+        }
+
+        &__link{
+            display: inline;
+            background-color: $todoColor;
+        }
+
+        &__facebook{
+            width: 70%;
+        }
+
+        &__heading{
+            margin: 0.83rem 0;
+        }
+
+        &__text{
+            margin-top: 1rem;
+            width: 20vw;
+        }
+
+        &__bottum{
+            height: 3rem;
+            &-wrapper{
+                width: 69vw;
+            }
+        }
+
+        &__copy{
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .footer{
+
+        &__middlebox{
+            padding-left: 20rem;
+        }
+
+        &__text{
+            width: 18rem;
+        }
+
+    }
+}
