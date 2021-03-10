@@ -3,14 +3,23 @@ module.exports = {
     title: "shopone",
   },  
   plugins: [
+/*     {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url:
+          process.env.WPGRAPHQL_URL ||
+          `https://arvi.dk/testet/graphql`,
+      },
+    }, */
     {
       resolve: "gatsby-source-graphql",
       options: {
         typeName: "WPGraphQL",
         fieldName: "wpcontent",
         url: "https://arvi.dk/testet/graphql",
-        consumerKkey: 'ck_8058ec4c374eac667a7e9e8e5b2357e7cb061718',
-        consumerSecret: 'cs_599de674787897bdda623e3b5d3aad1a07541655',
+        headers: {
+          Authorization: "Basic Y2tfNGIyOGRmYjA0ZTY5OTlkNjY4NmU0YmNhYjkxNDA3NmI2NGZkNjYyNjo="
+        }
       },
     },
     {
@@ -32,6 +41,10 @@ module.exports = {
         path: (__dirname, `src`),
       }, 
     },
+ /*    {
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: { prefixes: ['/kurv/'] },
+    }, */
       `gatsby-plugin-sass`,
       `gatsby-transformer-sharp`, 
       `gatsby-plugin-sharp`

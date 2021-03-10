@@ -20,6 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                       mediaItemUrl
                                     }
                                     ... on WPGraphQL_VariableProduct {
+                                        id
                                         slug
                                         price
                                         variations {
@@ -27,6 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                               node {
                                                 price
                                                 name
+                                                id
                                               }
                                             }
                                           }
@@ -44,11 +46,11 @@ exports.createPages = async ({ graphql, actions }) => {
             }
             const products = result.data.wpcontent.products.edges
                 products.forEach((product) => {
-                    console.log(product.node)
                     createPage({
                         path: `/${product.node.slug}/`,
                         component: productPage,
                         context: {
+                        id: product.node.id,
                         slug: product.node.slug,
                         headline: product.node.description,
                         image: product.node.image,

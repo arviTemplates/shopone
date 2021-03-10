@@ -1,11 +1,4 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+Det jeg kæmper med er mine global hooks. I React kan man wrappe dem rundt om sin Router. Men i Gatsby skal man lave de her filer der hedder gatsby-ssr.js og gatsby-browser.js Den globalProvider jeg prøver at lave hedder CartProvider. Men jeg får en sær fejl, som jeg har prøvet at løse i over to uger nu. Jeg kan ikke regne ud hvad jeg gør galt. Hvis jeg prøver at wrappe CartProvider rundt om mit Layout komponent og udkommentere de to gatsby filer, så virker state delen, men ikke dispatch delen. Håber det giver lidt mening det jeg skriver. 
 
 ## 🚀 Quick start
 
