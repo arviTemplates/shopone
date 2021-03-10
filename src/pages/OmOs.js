@@ -4,7 +4,6 @@ import './style.scss';
 import Layout from "../Components/Layout";
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <section className="omos">

@@ -2,7 +2,7 @@ import * as React from "react"
 import Address from '../Address/Address'
 import Facebook from '../../images/TODO_facebook-icon_white.png'
 
-export default ({  }) => {
+export default () => {
 
   return (
     <footer className="footer">

@@ -35,6 +35,10 @@
     color: white;
 }
 
+.headertilbud__kurvikon{
+    cursor: pointer;
+}
+
 .headertilbud__icons{
     align-self: center;
     justify-self: center;
@@ -43,6 +47,10 @@
 .headertilbud__koebekurv{
     text-decoration: none;
     color: var(--color-three);
+}
+
+.cartItems{
+    color: black;
 }
 
 @media screen and (min-width: 820px){
